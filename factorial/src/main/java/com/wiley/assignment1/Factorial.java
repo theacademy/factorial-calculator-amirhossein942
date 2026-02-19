@@ -33,10 +33,6 @@ public class Factorial {
 		*/
 
 		 //YOUR CODE STARTS HERE
-		 //Scanner scanner = new Scanner(System.in);
-
-		 //this.printStream.print("Please enter a value from 1 to 10 (inclusive): ");
-
 		 if (!scanner.hasNextInt())
 		 {
 			 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
