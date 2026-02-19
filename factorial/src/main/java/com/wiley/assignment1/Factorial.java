@@ -17,8 +17,7 @@ public class Factorial {
 	      this.printStream = printStream;
 	 }
 	 
-	 public int isInputNumberValid()  {
-		 
+	 public int isInputNumberValid() {
 		/*
 		- Update this method to accept a number from the user and store the value in an instance variable `num`. 
 			- Use an instance variable `scanner` to accept the input from the user.
@@ -33,13 +32,25 @@ public class Factorial {
 		- All code should be inside the placeholders below.
 		*/
 
-		//YOUR CODE STARTS HERE
+		 //YOUR CODE STARTS HERE
+		 if (!scanner.hasNextInt())
+		 {
+			 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+			 scanner.next();
+			 return -1;
+		 }
 
-		return -1;
+		 int num = scanner.nextInt();
 
+
+
+		 if(num < 1 || num > 10)
+		 {
+			 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+			 return -1;
+		 }
+		 else {return num;}
 		//YOUR CODE ENDS HERE
-		 
-			
 	 }
 	
 	 
@@ -53,7 +64,10 @@ public class Factorial {
 		 
 		int result = 1;
 		//YOUR CODE STARTS HERE
-
+		for(int i=num; i>0; i--)
+		{
+			result = i * result;
+		}
  
 
 		//YOUR CODE ENDS HERE
